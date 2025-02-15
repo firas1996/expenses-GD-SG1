@@ -29,7 +29,11 @@ function App() {
   ];
   return (
     <>
-      <ExpenseItem />
+      <ExpenseItem
+        title={expensesData[0].title}
+        price={expensesData[0].price}
+        date={expensesData[0].date}
+      />
       <ExpenseItem />
       <ExpenseItem />
       <ExpenseItem />
