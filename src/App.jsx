@@ -29,14 +29,15 @@ function App() {
   ];
   return (
     <>
-      <ExpenseItem
-        title={expensesData[0].title}
-        price={expensesData[0].price}
-        date={expensesData[0].date}
-      />
-      <ExpenseItem />
-      <ExpenseItem />
-      <ExpenseItem />
+      {expensesData.map((expense) => {
+        return (
+          <ExpenseItem
+            title={expense.title}
+            price={expense.price}
+            date={expense.date}
+          />
+        );
+      })}
     </>
   );
 }
