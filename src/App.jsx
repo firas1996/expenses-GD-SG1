@@ -18,7 +18,7 @@ function App() {
       id: 3,
       title: "Education",
       price: 5000,
-      date: new Date("2024-09-20"),
+      date: new Date("2024-08-20"),
     },
     {
       id: 4,
