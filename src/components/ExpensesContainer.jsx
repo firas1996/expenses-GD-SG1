@@ -5,7 +5,7 @@ import Chart from "./Chart";
 const ExpensesContainer = ({ expensesData }) => {
   return (
     <div className="expenses">
-      <Chart />
+      <Chart expensesData={expensesData} />
       {expensesData.map((expense) => {
         return (
           <ExpenseItem
