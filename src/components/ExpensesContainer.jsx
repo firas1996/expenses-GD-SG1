@@ -4,9 +4,14 @@ import Chart from "./Chart";
 import Filter from "./Filter";
 
 const ExpensesContainer = ({ expensesData }) => {
+  const years = [
+    "All",
+    ...new Set(expensesData.map((el) => el.date.getFullYear()).sort()),
+  ];
+  console.log(years);
   return (
     <div className="expenses">
-      <Filter />
+      <Filter years={years} />
       <Chart expensesData={expensesData} />
       {expensesData.map((expense) => {
         return (
