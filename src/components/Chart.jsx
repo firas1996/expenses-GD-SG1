@@ -26,7 +26,12 @@ const Chart = ({ expensesData }) => {
     <div className="chart">
       {chartData.map((item) => {
         return (
-          <ChartItem label={item.label} value={item.value} maxValue={max} />
+          <ChartItem
+            key={item.label}
+            label={item.label}
+            value={item.value}
+            maxValue={max}
+          />
         );
       })}
     </div>
