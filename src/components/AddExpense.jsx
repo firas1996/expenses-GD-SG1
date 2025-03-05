@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./AddExpense.css";
 
-const AddExpense = () => {
+const AddExpense = ({ getData }) => {
   const thisyear = new Date().getFullYear();
   const maxDate = `${thisyear + 2}-12-31`;
   const minDate = `${thisyear - 2}-01-01`;
@@ -18,7 +18,12 @@ const AddExpense = () => {
   };
   const submitData = (e) => {
     e.preventDefault();
-    console.log(data);
+    getData({
+      id: Math.random(),
+      title: data.title,
+      price: +data.price,
+      date: new Date(data.date),
+    });
     setData({
       title: "",
       price: "",
